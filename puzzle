@@ -1,0 +1,39 @@
+<meta charset = "utf-8">
+<script type="text/javascript">
+
+function askForAnswers(words){
+
+while(words.length!=0){
+var i=parseInt(Math.random()* words.length);
+var userAnswer = prompt("Отгадай загадку: "+words[i][0]);
+if (userAnswer==words[i][1]||userAnswer==words[i][2]){
+
+	alert("Правильно!");
+	words.splice(i, 1);
+	score++;
+} else {
+	alert("Не правильно! Правильный ответ: "+ words[i][1]);
+}
+}
+
+}
+
+var score=0;
+alert("Отгадай загадку:")
+
+
+var puzzles=[
+["К нам приехали с бахчи полосатые мячи", "арбузы", "Арбузы"],
+["Зимой - звезда, весной - вода", "снежинка", "Снежинка"],
+["Ночью не спит, мышей сторожит", "кот","кошка"],
+["Посадили зёрнышко - вырастили солнышко","подсолнух","Подсолнух"],
+
+];
+askForAnswers(puzzles);
+
+alert("Поздравляем!Вы набрали "+score+" правильных ответ(а)");
+		alert("Игра окончена!");
+
+		
+	
+	</script>
